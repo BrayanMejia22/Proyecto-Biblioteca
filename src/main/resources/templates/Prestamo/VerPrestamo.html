@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BIBLIOTECA</title>
+</head>
+
+<body>
+	<div class="main-container">
+		<nav class="nav1">
+			<img class="img1" src="https://www.uts.edu.co/sitio/wp-content/uploads/2021/02/Logo-UTS-1.png">
+			<ul class="nav-menu">
+				<li class="titulo nav-menu-item">
+					<div class="list__item list__item--click">
+						<img class="img2" src="https://cdn-icons-png.flaticon.com/512/6596/6596121.png">
+					</div>
+					<h1 class="titulo">Biblioteca Unidades Tecnológicas De Santander</h1>
+				</li>
+				<li class="admin nav-menu-item">
+					<h1 class="nombre">ADMINISTRADOR</h1>
+				</li>
+			</ul>
+		</nav>
+
+
+		<nav class="nav2">
+			<ul class="list">
+
+				<!--INICIO-->
+				<li class="list__item list__item--click">
+					<div class="list__button list__button--click">
+						<a href="/administrador/regresar" class="nav__link" style="margin-left: 60px;"><i
+								class="fa-solid fa-house" style="color: #000000;"></i> Inicio </a>
+					</div>
+				</li>
+
+				<!--CATEGORIAS-->
+				<li class="list__item list__item--click">
+					<div class="list__button list__button--click">
+						<a class="nav__link"><i class="fa-solid fa-network-wired" style="color: #000000;"></i>
+							Categorias <i class="list__arrow fa-solid fa-chevron-down" style="color: #000000;"></i></a>
+					</div>
+
+					<ul class="list__show">
+						<li class="list__inside">
+							<a href="/administrador/VistaRegistroCategoria" class="nav__link nav__link--inside"><i
+									class="fa-solid fa-plus" style="color: #000000;"></i> Registrar</a>
+						</li>
+					</ul>
+				</li>
+
+				<!--Libros-->
+				<li class="list__item list__item--click">
+					<div class="list__button list__button--click">
+						<a class="nav__link"><i class="fa-solid fa-book" style="color: #000000;"></i> Libros <i
+								class="list__arrow fa-solid fa-chevron-down" style="color: #000000;"></i></a>
+					</div>
+
+					<ul class="list__show">
+						<li class="list__inside">
+							<a href="/libro/VistaListaLibros" class="nav__link nav__link--inside"><i
+									class="fa-solid fa-list" style="color: #000000;"></i> Listar</a>
+						</li>
+						<li class="list__inside">
+							<a href="/libro/VistaRegistroLibros" class="nav__link nav__link--inside"><i
+									class="fa-solid fa-plus" style="color: #000000;"></i> Registrar</a>
+						</li>
+						<li class="list__inside">
+							<a href="/libro/VistaBuscarLibro" class="nav__link nav__link--inside"><i
+									class="fa-solid fa-pen-to-square" style="color: #000000;"></i> Actualizar</a>
+						</li>
+					</ul>
+				</li>
+
+				<!--Estudiante-->
+				<li class="list__item list__item--click">
+					<div class="list__button list__button--click">
+						<a class="nav__link"><i class="fa-solid fa-user" style="color: #000000;"></i>
+							Estudiantes
+							<i class="list__arrow fa-solid fa-chevron-down" style="color: #000000;"></i></a>
+					</div>
+
+					<ul class="list__show">
+						<li class="list__inside">
+							<a href="/estudiante/PrincipalEstudiante" class="nav__link nav__link--inside"><i
+									class="fa-solid fa-list" style="color: #000000;"></i> Listar</a>
+						</li>
+
+						<li class="list__inside">
+							<a href="/estudiante/RegistroEstudiante" class="nav__link nav__link--inside"><i
+									class="fa-solid fa-plus" style="color: #000000;"></i> Registrar</a>
+						</li>
+					</ul>
+				</li>
+
+				<!--Prestamos-->
+				<li class="list__item list__item--click">
+					<div class="list__button list__button--click">
+						<a class="nav__link"><i class="fa-solid fa-folder-plus" style="color: #000000;"></i>
+							Prestamos <i class="list__arrow fa-solid fa-chevron-down" style="color: #000000;"></i></a>
+					</div>
+
+					<ul class="list__show">
+
+						<li class="list__inside">
+							<a href="/prestamo/VerPrestamo" class="nav__link nav__link--inside"><i
+									class="fa-solid fa-minus" style="color: #000000;"></i> Ver Prestamo</a>
+						</li>
+
+						<li class="list__inside">
+							<a href="/prestamo/Prestamos" class="nav__link nav__link--inside"><i
+									class="fa-solid fa-plus" style="color: #000000;"></i> Crear Prestamo</a>
+						</li>
+					</ul>
+				</li>
+
+				<!--Calendario-->
+				<li class="list__item list__item--click">
+					<div class="list__button list__button--click">
+						<a class="nav__link"><i class="fa-solid fa-calendar-days" style="color: #000000;"></i>
+							Calendario <i class="list__arrow fa-solid fa-chevron-down" style="color: #000000;"></i></a>
+					</div>
+
+					<ul class="list__show">
+						<li class="list__inside">
+							<a href="/calendario/Vistacalendario" class="nav__link nav__link--inside"><i
+									class="fa-solid fa-eye" style="color: #000000;"></i> Ver Calendario</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+
+			<!--CERRAR SESSION-->
+			<div class="cerrar">
+				<li class="list__item list__item--click">
+					<div class="list__button list__button--click">
+						<a href="/CerrarSesion" class="nav__link"><i class="fa-solid fa-right-to-bracket"
+								style="color: #050505;"></i>Cerrar Sesión</a>
+					</div>
+				</li>
+			</div>
+		</nav>
+
+		<div class="contenedorMayor">
+			<div class="formulario">
+				<h1 class="Categ">Listado De Prestamos</h1>
+
+				<table class="table">
+					<thead>
+						<tr class="columnas">
+							<th>Libros</th>
+							<th>Estudiante</th>
+							<th>Fecha Prestamo</th>
+							<th>Fecha Devolución</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody class="filas">
+						<tr th:each="prestamo, status: ${prestamos}">
+							<td th:text="${nombresLibros[__${status.index}__]}"></td>
+							<td th:text="${nombresEstudiantes[__${status.index}__]}"></td>
+							<td th:text="${#dates.format(prestamo.fechaprestamo, 'yyyy-MM-dd')}"></td>
+							<td th:text="${#dates.format(prestamo.fechadevolucion, 'yyyy-MM-dd')}"></td>
+							<td>
+								<a th:href="@{/prestamo/EliminarPrestamo/{id}(id=${prestamo.id})}">
+									<i class="fa-solid fa-trash" style="color: #000000;"></i>
+								</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script src="https://kit.fontawesome.com/d111faab9b.js" crossorigin="anonymous"></script>
+
+<script>
+	let listElements = document.querySelectorAll('.list__button--click');
+
+	listElements.forEach(listElements => {
+		listElements.addEventListener('click', () => {
+			listElements.classList.toggle('arrow');
+
+			let height = 0;
+			let menu = listElements.nextElementSibling;
+
+			if (menu.clientHeight == "0") {
+				height = menu.scrollHeight;
+			}
+			menu.style.height = `${height}px`;
+		})
+	});
+
+</script>
+
+</html>
+
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	body {
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+		font-family: 'Times New Roman', Times, serif;
+	}
+
+	.main-container {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.nav__link:hover {
+		color: red;
+	}
+
+	.nav1,
+	.nav2 {
+		position: static;
+		border: 2px solid rgb(0, 128, 255);
+		box-sizing: border-box;
+		background: rgba(1, 104, 201, 1.0);
+		background: linear-gradient(180deg, rgba(1, 104, 201, 1.0), rgba(1, 75, 145, 1.0));
+	}
+
+	.nav1 {
+		height: 80px;
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+		display: flex;
+		justify-content: space-between;
+		color: white;
+	}
+
+	.img1 {
+		position: absolute;
+		width: 8%;
+		top: 0.3em;
+		left: 2em;
+	}
+
+	.img2 {
+		position: absolute;
+		width: 5%;
+		top: 0.2em;
+		right: 20px;
+	}
+
+	.titulo {
+		margin-top: -0.8em;
+		margin-left: 100px;
+
+	}
+
+	.nombre {
+		margin-top: -0.2em;
+		margin-left: 60px;
+	}
+
+	.nav-menu {
+		display: flex;
+		margin-left: 50px;
+		margin-right: 40px;
+		list-style: none;
+	}
+
+	.nav-menu-item {
+		font-size: 20px;
+		margin: 0 10px;
+		line-height: 80px;
+		width: max-content;
+	}
+
+	.admin {
+		margin-left: 230px;
+		font-size: 15px;
+	}
+
+
+	/*estilos menu*/
+	.nav2 {
+		width: 300px;
+		font-size: 20px;
+	}
+
+	.nav__link {
+		color: #000000;
+		display: block;
+		padding: 10px 0;
+		text-decoration: none;
+		margin-left: 30px;
+	}
+
+	.nav__link--inside {
+		border-radius: 6px;
+		padding-left: 10px;
+		text-align: left;
+	}
+
+	.nav__link:hover {
+		color: red;
+	}
+
+	.list {
+		height: 99.7vh;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	.list__item {
+		list-style: none;
+		width: 100%;
+		text-align: center;
+		overflow: hidden;
+		margin-bottom: 20px;
+	}
+
+	.list__item--click {
+		cursor: pointer;
+	}
+
+	.list__button {
+		display: flex;
+		text-align: center;
+		gap: 1em;
+		width: 70%;
+		margin: 0 auto;
+		background-color: #D9D9D9;
+		border: 2px solid #000000;
+		border-radius: 20px;
+	}
+
+	.arrow .list__arrow {
+		transform: rotate(-90deg);
+	}
+
+	.list__arrow {
+		margin-left: auto;
+		transition: transform .3s;
+	}
+
+	.list__show {
+		width: 80%;
+		margin-left: auto;
+		border-left: 2px solid #303440;
+		list-style: none;
+		transition: height .4s;
+		height: 0;
+	}
+
+	.list__inside a {
+		color: white;
+	}
+
+	.cerrar {
+		margin-top: -70px;
+	}
+
+	/*Estilos*/
+
+	.contenedorMayor {
+		display: flex;
+		margin-top: 140px;
+		text-align: center;
+	}
+
+	.formulario {
+		margin-right: 60px;
+	}
+
+	.formulario h1 {
+		text-align: center;
+		font-size: 50px;
+		margin-bottom: 20px;
+	}
+
+	/* Estilos de tabla comunes en Bootstrap */
+	.table {
+		width: 100%;
+		margin-bottom: 1rem;
+		color: #212529;
+		border-collapse: collapse;
+	}
+
+	.table th,
+	.table td {
+		padding: 0.75rem;
+		vertical-align: top;
+	}
+
+	.table td {
+		font-size: 20px;
+	}
+
+	.table thead th {
+		vertical-align: bottom;
+		border-bottom: 2px solid #dee2e6;
+	}
+
+	.table thead th:first-child {
+		border-top-left-radius: 10px;
+	}
+
+	.table thead th:last-child {
+		border-top-right-radius: 10px;
+	}
+
+	.table tbody+tbody {
+		border-top: 2px solid #dee2e6;
+	}
+
+	.table tbody tr:hover {
+		background-color: rgb(243, 243, 233);
+	}
+
+	.table .table {
+		background-color: #fff;
+	}
+
+	.table thead th {
+		background-color: #0058AA;
+		color: white;
+	}
+
+	.table-striped tbody tr:nth-of-type(odd) {
+		background-color: rgba(0, 0, 0, 0.05);
+	}
+
+	.table th {
+		font-weight: 600;
+		font-size: 25px;
+	}
+
+	.table td:last-child {
+		text-align: right;
+	}
+</style>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BIBLIOTECA UTS</title>
+</head>
+
+<body>
+	<div class="main-container">
+		<nav class="nav1">
+			<img class="img1" src="https://www.uts.edu.co/sitio/wp-content/uploads/2021/02/Logo-UTS-1.png">
+			<ul class="nav-menu">
+				<li class="titulo nav-menu-item">
+					<div class="list__item list__item--click">
+						<img class="img2" src="https://cdn-icons-png.flaticon.com/512/6596/6596121.png">
+					</div>
+					<h1 class="titulo">Biblioteca Unidades Tecnológicas De Santander</h1>
+				</li>
+				<li class="admin nav-menu-item">
+					<h1 class="nombre">ESTUDIANTE</h1>
+				</li>
+			</ul>
+		</nav>
+
+
+		<nav class="nav2">
+
+			<div class="list__item list__item--click">
+				<img class="img3" src="https://cdn-icons-png.flaticon.com/512/6596/6596121.png">
+			</div>
+
+			<h4 class="nombre1" id="nombreEstudiante">BrayanMejia</h4>
+
+			<h4 class="correo1"><span>elyesid22@gmail.com</span></h4>
+
+
+			<!--CERRAR SESSION-->
+			<div class="cerrar">
+				<li class="list__item list__item--click">
+					<div class="list__button list__button--click">
+						<a href="/CerrarSesion" class="nav__link"><i class="fa-solid fa-right-to-bracket"
+								style="color: #050505;"></i>Cerrar Sesión</a>
+					</div>
+				</li>
+			</div>
+
+		</nav>
+
+		<div class="contenedorMayor">
+			<div class="formulario">
+				<h1 class="Categ">Listado De Libros</h1>
+
+				<div class="busqueda">
+					<div class="form-group" style="display: inline-block; margin-right: 40px;">
+						<select id="libro1" class="form-control">
+							<option value="todos">Todos los libros</option>
+							<option th:each="libro : ${libros}" th:value="${libro.titulo}" th:text="${libro.titulo}">
+							</option>
+						</select>
+					</div>
+
+					<div class="form-group" style="display: inline-block;">
+						<select id="categoria" class="form-control">
+							<option value="todos">Todos las Categorias</option>
+							<option th:each="categoria : ${categorias}" th:value="${categoria.nombre}"
+								th:text="${categoria.nombre}">
+							</option>
+						</select>
+					</div>
+				</div>
+
+				<table class="table">
+					<!-- Encabezado de la tabla -->
+					<thead>
+						<tr class="columnas">
+							<th>Libro</th>
+							<th>Nombre</th>
+							<th>Categoria</th>
+							<th>Autor</th>
+							<th>Paginas</th>
+							<th>Idioma</th>
+							<th></th>
+						</tr>
+					</thead>
+					<!-- Cuerpo de la tabla -->
+					<tbody class="filas">
+						<tr th:each="libro : ${libros}">
+							<td>
+								<img th:if="${libro.imagen != null}" th:src="@{'/libro/imagen/' + ${libro.id}}"
+									alt="Libro Imagen" style="width: 70%;" />
+							</td>
+
+							<td th:text="${libro.titulo}"></td>
+							<td th:text="${libro.nombreCategorias}"></td>
+							<td th:text="${libro.autor}"></td>
+							<td th:text="${libro.paginas}"></td>
+							<td th:text="${libro.idioma}"></td>
+							<td>
+								<span th:if="${libro.prestado}" class="estado-prestado">Prestado</span>
+								<span th:unless="${libro.prestado}" class="estado-disponible">Disponible</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script>
+	document.getElementById("libro1").addEventListener("change", function () {
+		var selectedLibro = this.value;
+		var filas = document.querySelectorAll(".filas tr");
+
+		filas.forEach(function (fila) {
+			var libroTitulo = fila.querySelector("td:nth-child(2)").textContent;
+
+			if (selectedLibro === "todos" || selectedLibro === libroTitulo) {
+				fila.style.display = "";
+			} else {
+				fila.style.display = "none";
+			}
+		});
+	});
+
+	document.getElementById("categoria").addEventListener("change", function () {
+		var selectedCategoria = this.value;
+		var filas = document.querySelectorAll(".filas tr");
+
+		filas.forEach(function (fila) {
+			var categorias = fila.querySelector("td:nth-child(3)").textContent;
+
+			if (selectedCategoria === "todos" || selectedCategoria === categorias) {
+				fila.style.display = "";
+			} else {
+				fila.style.display = "none";
+			}
+		});
+	});
+
+</script>
+
+<script src="https://kit.fontawesome.com/d111faab9b.js" crossorigin="anonymous"></script>
+
+</html>
+
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	body {
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+		font-family: 'Times New Roman', Times, serif;
+	}
+
+	.main-container {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.nav1,
+	.nav2 {
+		position: static;
+		border: 2px solid rgb(0, 128, 255);
+		box-sizing: border-box;
+		background: rgba(1, 104, 201, 1.0);
+		background: linear-gradient(180deg, rgba(1, 104, 201, 1.0), rgba(1, 75, 145, 1.0));
+	}
+
+	.nav1 {
+		height: 80px;
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+		display: flex;
+		justify-content: space-between;
+		color: white;
+	}
+
+	.img1 {
+		position: absolute;
+		width: 8%;
+		top: 0.3em;
+		left: 2em;
+	}
+
+	.img2 {
+		position: absolute;
+		width: 5%;
+		top: 0;
+		right: 10px;
+	}
+
+	.img3 {
+		position: absolute;
+		width: 10%;
+		top: 100px;
+		right: 58em;
+	}
+
+	.titulo {
+		margin-top: -0.8em;
+		margin-left: 100px;
+
+	}
+
+	.nombre {
+		margin-top: -0.2em;
+		margin-left: 120px;
+	}
+
+	.nombre1 {
+		margin-top: 12em;
+		margin-left: 4.0em;
+		color: white;
+	}
+
+	.correo1 {
+		margin-top: 1em;
+		margin-left: 2.5em;
+		color: white;
+	}
+
+	.nav-menu {
+		display: flex;
+		margin-left: 50px;
+		margin-right: 40px;
+		list-style: none;
+	}
+
+	.nav-menu-item {
+		font-size: 20px;
+		margin: 0 10px;
+		line-height: 80px;
+		width: max-content;
+	}
+
+	.admin {
+		margin-left: 230px;
+		font-size: 15px;
+	}
+
+
+	/*estilos menu*/
+	.nav2 {
+		width: 350px;
+		font-size: 20px;
+		height: 99.5vh;
+	}
+
+	.nav__link {
+		color: #000000;
+		display: block;
+		padding: 10px 0;
+		text-decoration: none;
+		margin-left: 30px;
+	}
+
+	.nav__link--inside {
+		border-radius: 6px;
+		padding-left: 10px;
+		text-align: left;
+	}
+
+	.nav__link:hover {
+		color: red;
+	}
+
+	.list__item {
+		list-style: none;
+		width: 100%;
+		text-align: center;
+		overflow: hidden;
+		margin-bottom: 20px;
+	}
+
+	.list__button {
+		display: flex;
+		text-align: center;
+		gap: 1em;
+		width: 70%;
+		margin: 0 auto;
+		background-color: #D9D9D9;
+		border: 2px solid #000000;
+		border-radius: 20px;
+	}
+
+	.cerrar {
+		margin-top: 12em;
+	}
+
+
+	/*Estilos*/
+	.contenedorMayor {
+		display: flex;
+		margin-top: 100px;
+		text-align: center;
+		max-height: 500px;
+		overflow: auto;
+	}
+
+	.formulario h1 {
+		font-size: 50px;
+		margin-bottom: 20px;
+		margin-left: 2em;
+	}
+
+	.form-group .categ1 {
+		font-size: 20px;
+	}
+
+	.busqueda {
+		margin-left: 5em;
+	}
+
+	.form-group select {
+		height: 42px;
+		font-size: 18px;
+		border: 0;
+		text-align: center;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		border-radius: 10px;
+		border: 2px solid #000000;
+		font-family: 'Times New Roman', Times, serif;
+		width: 110%;
+	}
+
+	.table {
+		width: 80%;
+		color: #212529;
+		border-collapse: collapse;
+		margin-left: 7em;
+	}
+
+	.table th,
+	.table td {
+		padding: 0.75rem;
+		vertical-align: top;
+	}
+
+	.table td {
+		text-align: center;
+	}
+
+	.table thead th {
+		vertical-align: bottom;
+		border-bottom: 2px solid #dee2e6;
+	}
+
+	.table thead th:first-child {
+		border-top-left-radius: 10px;
+	}
+
+	.table thead th:last-child {
+		border-top-right-radius: 10px;
+	}
+
+	.table tbody+tbody {
+		border-top: 2px solid #dee2e6;
+	}
+
+	.table tbody tr:hover {
+		background-color: rgb(243, 243, 233);
+	}
+
+	.table .table {
+		background-color: #fff;
+	}
+
+	.table thead th {
+		background-color: #0058AA;
+		color: white;
+	}
+
+	.table-striped tbody tr:nth-of-type(odd) {
+		background-color: rgba(0, 0, 0, 0.05);
+	}
+
+	.table th {
+		font-weight: 600;
+		font-size: 25px;
+	}
+
+	.table td:last-child {
+		text-align: right;
+	}
+
+	.estado-prestado {
+		background-color: #FF0000;
+		color: #FFFFFF;
+		padding: 5px;
+		border-radius: 5px;
+	}
+
+	.estado-disponible {
+		background-color: #00FF00;
+		color: #000000;
+		padding: 5px;
+		border-radius: 5px;
+	}
+</style>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BIBLIOTECA</title>
+</head>
+
+<body>
+	<div class="main-container">
+		<nav class="nav1">
+			<img class="img1" src="https://www.uts.edu.co/sitio/wp-content/uploads/2021/02/Logo-UTS-1.png">
+			<ul class="nav-menu">
+				<li class="titulo nav-menu-item">
+					<div class="list__item list__item--click">
+						<img class="img2" src="https://cdn-icons-png.flaticon.com/512/6596/6596121.png">
+					</div>
+					<h1 class="titulo">Biblioteca Unidades Tecnológicas De Santander</h1>
+				</li>
+				<li class="admin nav-menu-item">
+					<h1 class="nombre">ADMINISTRADOR</h1>
+				</li>
+			</ul>
+		</nav>
+
+
+		<nav class="nav2">
+			<ul class="list">
+
+				<!--INICIO-->
+				<li class="list__item list__item--click">
+					<div class="list__button list__button--click">
+						<a href="/administrador/regresar" class="nav__link" style="margin-left: 60px;"><i
+								class="fa-solid fa-house" style="color: #000000;"></i> Inicio </a>
+					</div>
+				</li>
+
+				<!--CATEGORIAS-->
+				<li class="list__item list__item--click">
+					<div class="list__button list__button--click">
+						<a class="nav__link"><i class="fa-solid fa-network-wired" style="color: #000000;"></i>
+							Categorias <i class="list__arrow fa-solid fa-chevron-down" style="color: #000000;"></i></a>
+					</div>
+
+					<ul class="list__show">
+						<li class="list__inside">
+							<a href="/administrador/VistaRegistroCategoria" class="nav__link nav__link--inside"><i
+									class="fa-solid fa-plus" style="color: #000000;"></i> Registrar</a>
+						</li>
+					</ul>
+				</li>
+
+				<!--Libros-->
+				<li class="list__item list__item--click">
+					<div class="list__button list__button--click">
+						<a class="nav__link"><i class="fa-solid fa-book" style="color: #000000;"></i> Libros <i
+								class="list__arrow fa-solid fa-chevron-down" style="color: #000000;"></i></a>
+					</div>
+
+					<ul class="list__show">
+						<li class="list__inside">
+							<a href="/libro/VistaListaLibros" class="nav__link nav__link--inside"><i
+									class="fa-solid fa-list" style="color: #000000;"></i> Listar</a>
+						</li>
+						<li class="list__inside">
+							<a href="/libro/VistaRegistroLibros" class="nav__link nav__link--inside"><i
+									class="fa-solid fa-plus" style="color: #000000;"></i> Registrar</a>
+						</li>
+						<li class="list__inside">
+							<a href="/libro/VistaBuscarLibro" class="nav__link nav__link--inside"><i
+									class="fa-solid fa-pen-to-square" style="color: #000000;"></i> Actualizar</a>
+						</li>
+					</ul>
+				</li>
+
+
+				<!--Estudiante-->
+				<li class="list__item list__item--click">
+					<div class="list__button list__button--click">
+						<a class="nav__link"><i class="fa-solid fa-user" style="color: #000000;"></i>
+							Estudiantes
+							<i class="list__arrow fa-solid fa-chevron-down" style="color: #000000;"></i></a>
+					</div>
+
+					<ul class="list__show">
+						<li class="list__inside">
+							<a href="/estudiante/PrincipalEstudiante" class="nav__link nav__link--inside"><i
+									class="fa-solid fa-list" style="color: #000000;"></i> Listar</a>
+						</li>
+
+						<li class="list__inside">
+							<a href="/estudiante/RegistroEstudiante" class="nav__link nav__link--inside"><i
+									class="fa-solid fa-plus" style="color: #000000;"></i> Registrar</a>
+						</li>
+					</ul>
+				</li>
+
+				<!--Prestamos-->
+				<li class="list__item list__item--click">
+					<div class="list__button list__button--click">
+						<a class="nav__link"><i class="fa-solid fa-folder-plus" style="color: #000000;"></i>
+							Prestamos <i class="list__arrow fa-solid fa-chevron-down" style="color: #000000;"></i></a>
+					</div>
+
+					<ul class="list__show">
+
+						<li class="list__inside">
+							<a href="/prestamo/VerPrestamo" class="nav__link nav__link--inside"><i
+									class="fa-solid fa-minus" style="color: #000000;"></i> Ver Prestamo</a>
+						</li>
+
+						<li class="list__inside">
+							<a href="/prestamo/Prestamos" class="nav__link nav__link--inside"><i
+									class="fa-solid fa-plus" style="color: #000000;"></i> Crear Prestamo</a>
+						</li>
+					</ul>
+				</li>
+
+				<!--Calendario-->
+				<li class="list__item list__item--click">
+					<div class="list__button list__button--click">
+						<a class="nav__link"><i class="fa-solid fa-calendar-days" style="color: #000000;"></i>
+							Calendario <i class="list__arrow fa-solid fa-chevron-down" style="color: #000000;"></i></a>
+					</div>
+
+					<ul class="list__show">
+						<li class="list__inside">
+							<a href="/calendario/Vistacalendario" class="nav__link nav__link--inside"><i
+									class="fa-solid fa-eye" style="color: #000000;"></i> Ver Calendario</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+
+			<!--CERRAR SESSION-->
+			<div class="cerrar">
+				<li class="list__item list__item--click">
+					<div class="list__button list__button--click">
+						<a href="/CerrarSesion" class="nav__link"><i class="fa-solid fa-right-to-bracket"
+								style="color: #050505;"></i>Cerrar Sesión</a>
+					</div>
+				</li>
+			</div>
+		</nav>
+
+		<div class="contenedorMayor">
+			<div class="formulario">
+				<h1 class="Categ">Registro De Categorias</h1>
+				<form method="post" th:action="@{/administrador/registroCategoria}">
+
+					<div class="form-group">
+						<label class="categ1">Nombre De Categoria:</label><br>
+						<input type="text" id="nombre" name="nombre" placeholder="Nombre Categoria">
+					</div>
+
+					<button type="submit" class="btn">REGISTRAR</button>
+				</form>
+			</div>
+
+			<div class="imagen">
+				<img
+					src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMSEhUSEhQVFRMVFRUWFRYYFhgTFRcWFhUXGBYWFRUYHiggGBolGxUWITEiJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGy0lHyUtLS0tLS0rKy0tLS0tLS0tLS0tLS0rLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAABgEDBAUHAgj/xABOEAABAwIBBgYMCgkEAgMAAAABAAIDBBEhBQYSMUFRE1JhcZHRBxQWIjJTgZKTobHBFSNCVGJjotLh8CQzNEOCo7PC4hdysvFz02SD4//EABoBAQADAQEBAAAAAAAAAAAAAAABAgMEBQb/xAA6EQACAQIBCAgFAwMFAQAAAAAAAQIDEQQSEyFRUpGh0QUUFTFBYXHBQoGx4fAiMtJTouJDYnKywjP/2gAMAwEAAhEDEQA/AO4oiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIo9XZ30sTizhC97SQWRtLzcYEX1XvyqG0u8tGEpftVyQooi7Omok/Z6GVw40lohz229Kr8OVcZHbEULdI2bolzukk61nKtCKuaRw85O2i/qiWoor3TuxuGWBsdYsd2J5Qrrc43XtoswtfE3F9XsPQseu0db3M16jW1LeiSoo93RG9tAX3aWPPq1L2M4vq/tf4qeu0Nrg+RHUq+riuZvkWiGcQ8X9r8F6GcTOI7pCnrlHa+vIjqdbZ4rmbtFphl+Piv9XWvQy/Fuf0DrVutUdpEdVrbLNui1Iy9Fuf0DrXoZbi+l0J1mjtLeR1atss2iLCpMpRyGzTjuOB8m9Zq1jKMleLuZSjKLtJWCIisVCIiAIiIAiIgCIiAIiIAiIgCx+12A3DWgnWQACTylZC8uWdVXiSjytJnfFenLtrHsPS4A+1bsrUZ1uApZL4C8f8AUYuS2hmtJ2nH1Rz7KEp+OA1Oa1+q9iYwP7Fdirjwr8BiyPfjZ0lvasGrqmOL8dUbQLbTom458ViumBcQTgYwD0uw9ZXJGH6Vo8PZHuX0/nmbk1p4YGw/VOHQ5nWssVp3D1qMCoDHMDTgGObtOF2W9itGdrWho0tFpuLuOu5OJvcjHUodFOxe5LXVzjrC1dHlZwiY3RBswNvc3wFr+pR+TKhDi4EkkW1nRtzLDjrpNG17a/aVpHD6PzzIuTFuWnAAaIPlKr8OO4g6SoeK6TjIKx/G/PIp6vHULkpoctEBwLb9/IfC4zy62rZpWV6bLl2uGhbvTjpasOZQvthxBGkbaV8MNyq6Z2J0jiN+Ct1aN7hPQTbJ+cBYI36Ju0NN9LXgL7Nq6mx1wCNRFwvnIOJ0TjfRt6ty+h6CMtija7W1jQecNAK6sNTUMpI83pC1oP19n7mSiIuo80IiIAiIgCIiAIiIAiIgCIiAKD5x58OpJNB1M8AlwY5xI09E4loa11xiNu1TKoqGMGk9zWje4gD1qM5azqDHBsUcc4tfSdOyNoOOFiC7VtttUSjlaPz3NKafeo33+zRHzn/VuAMdITfV8XK4eUnRWLlSuyjWx6JgcADfQGg0EjVfvifIt1FnZK4YQ0rDySyS/wDGFqpLnLWEWZwIPJTzyW6XtBVcyvFLe/axvHOp3jG3y5tkBNNI0kOs1wJDmuBDmkYEHBeTE/e1bmozdqJpHSPmnLnuLnaNMWi5OwcJqVyLMouAIrH2P1f+a6o0cE+9f9hncdrW6JHnQSH5Q/PkVo0TjtHr6lI5MyHhwb24/EEj4rcQD+95Qqx5gyuNu3rcroiB08KrZnBLwe9kZ7HrVuRHBQO5PX1KgoDydJ6lLB2NKjZXRnmYf/YqO7GVVsqgeZh++mawfnv+xXreL8XH8+ZFm5Pd9HpPUvbMluO1nldb2hb1/Y9qRgaoA8sbvvKxLmJUNBJq2WGs6DunWUzGE89/OJfrOO1Ld/kYAyBLsMZ5pGda8OyFKNej5zVnuzEqb27ZjvYnU/ULA7OUdKsOzNqNlZB6Rw9yr1fDa3v+w6zjV4Ld/kZGbVBCydslVIGsjIcGNa6QvcMWgloIDQcTvtZdOjzvo3ENEtiTbFj2jyktsPKuWOzErbkcPDcC5u+QYG+PgchXiHMarc4B1RBok2cWyPc4DaWt0Bc22XCuqWGWhN7/ALGFV4mpK8lw+53VFgUVfG7vGk3b3uO8Dqss9cpSUXF2YREQgIiIAiIgCIiAIiIAiIgLM0DXiz2tcNdiAcd+Kx25PibqiZ5rV6yjK9rLs0NK/wAu+jbbq2rVfCFTxqfyNld71nUg5LQSpxWhyS8tPsjctjA1NA6B7F6x3Dp/BaI10/HH8NPI5eRUT8eXyU+j/wAljmX+NDOU9rhL+JIMeRRaqs2aVoIweDuxcxrj6yelZJln2uqPJHEPctHlXJz9EzRv08e/EjSHg7SbdS1o0mn3reaUsTRptuT4S90jJmlGmzEfK27LddlddUs4zekKNOinBBtGScBi62/3epH085xcyPznLqzUvLedK6Qwu09zJEapnGb0qnbjOMFF3U7xrZHs+UdRNr6leGTpTqiYeZ7upRm56uKL9fwu3wZIe328b2o6uaQQSbHA4bCo3LRSs8KJov8ATd91eBG/xQ9Ifupm56uKCxuFfx8Jcjdx5QForkk7cNfxZv6wCrMtcA8gm4N8ODHg21aXNtWqvJ4vVq+M/BXo6Wd40mwOcMcQ64NsCNWON0yJ6uK5h4zC+E/ryNszKXgHRJ7wtPLcNvfyhW3VgAYRGwmwvcAXIx0gQMDyLDMM7b3p5Lb7g6/KF4mjlwDoJG3Pe4gG/wBHHlUZEtQWKwu2uJuKfKtnuOidTNu0Fxvq3EKeN1BQLNiiD5dGRj2aNnWcPDJJtjc7j0WU/VWmnpOfEVaVS2bd/T6BERQcwREQBERAEREAREQBFamk0Wl1i6w1AXJ5gtHJnQwEtMUtwbEaDtfQqymo9/0b+heFOUu72JAV5uo7JnSCO9hm9G4+5WjnM/ZDP6Jy56k4ytylyJzdRO1uMeZJ15c26jHdDMdUE3ljt7VYlzkqMdFjcNemSwjnGjq5Vk3TtpfCXIsqVZ90Hvh/IlfBfnDqWBlONrA9x1FmPkv7vYtE7Llfsih8/wDBamurK6a4MbLA4jT5jv5lehOhCeVlLjyMq+GxFSGSocY/yM6SNnBM1aXeXx22xVxzIsbiPUf3178ox9S0wirfFR+cOtV4Ot8Uzzh1rv65Q20cS6OxOzxRshKwMIsLmIi9r4l7rLcnKzNzvNd1KHStrBiY2DEHFzBqxG3evJqKo7I7/wDkj61HWsO/jQ7MxL+HiuZvMpu4RzNHC2lfSDrY2tqF9isNpW7XN81/3VrdCuPyB58apwFdtZb+NnuU9bw+2h2XiNniuZINOMAiNoHLoEu8hdZZVHWCNmjZxsSdg14nbzqKOZVWPen0jeVWeDqjrYfSKetYbbXELovE7PFcyZS5UaQQWmxBBx2FaaSu4QDT1FoF9IYXDL2B5n9IWkfTVB1x/wAwKhglAsYh57SnW8LtriWXReJ2OMeZL48rRcM0k6I0Hg7cdJhbq/iUujdcA7wCuV5JiaZWmYaMZtex0jYHURhYY4ldWCq6tKp/85Xsa08LUofvVr+ns2VREVTUIiIAiIgCIiAIiIAvLkcLiywvg8eMm9I5ZVVJqyReCi/3O3yuZi88ygdVkfLN+9qYrcmn/cSVr6jJeW2AvNUHAYkDR6rrJUW3bKjf1fIl5C03e5fyOl2PItLnCWtaC7RubC+0gXuDyY+tc/NRlj5wegrHqGZUf4cmlsxjv7Vap0fXkmv073yFLE4eElLKfyX3JJHVOLW2fYhrdpFjtLhbH886yoZwXu79oGi3Zba7eeZQvgMo8dvogvPBZRHy2+hCw7IxGuO98jtfSeG89y5k/DAdbyf4gP8AjZV4Bm2x/wBxLv8AkVz4/CHjWejavJkyh45no29adk4jXHe+RXtHD7T3LmdAfJEzY0cwHrI1eVYcuUrHe3YO9cLcoBuPzgoVp1/jmejZ1rz+neNb5g+8o7IxD8Y7/sSukcN43e7mTllXCfBYWn6PeetutV7dcNTgRudY+sW96gZZWeMb6Nv3kDazxrfRt+8nZGJ1rf8AYntLC+fDmTmaubrIseQhw6MD6liuyg02Gy+IxBt/3ZRD9N8aPRs61RwrDrlHo2dansfEeLjv+xK6Uwq17vuTN1ayx7xoOzUdm62OOxXjUh2xg5LBQQmr8d/LjQGtJAE2JwHxcdyTqCdjYjXHe+RHamG8/wA+ZM6cAjADFzrYb3G1l0KnaQ1oOsNAPOAoZm1mjVwyRTT1jXhty6EU7ADdpAHC3uLEg3A2KcrTDYZ0XJyad9V7cUjHFYmNayiu7WERF1nIEREAREQBERAEREBj1NSxgBe4NBNgSbXO71FUZWRu1PaeYgno1qtXTMkYWSNDmnYcQtJLmnB8gvjP0XEDzdSxqTlF6DSCg1+pu/5+d5bps+qB7i0ziNw1tla6Ejn0wAtu6ujfE58b2PbonFrg4YjDEKMVuaEhFuEZMNjZo2vHTgorX5vUzH6MkBjlAxMT3MHO0XtYgg6lR1oXWUmvSz+uSzRYZ1E1Tkn+fMl5mOwHpv7lThHfkKEvyXTDZOeed4968DIlK79287bcNJe2wkLq7Qw+p7lzOLsSrtInBJ/IHUvBKgwzdo3X+IJtrvJIf7k7m6PZANV/ClOG/wDWKe0aGqW5cyew6m2tzJsZG7x0hU4dnHb5wULbm/S4WpxiLj9ZjzfGqvwJTAX7Xba5BwebW3/GKH0nS1PcuZPYc9tbiYOqIdr4fK5qsunpdr6fz2D3qNOyLTsONNERa+LSBrt4ZJAKuMybS7KSLoB9yr2nT8IvhzJXQU9vgbt01Ftlp/SsH9ysvmofnFOP/uj61rRk6n2UsPmDqVwZOh2UsPo29SjtSGy+BbsSf9T68zIdU0Hzmn9LH1q26roPnMPntPsVBRR7KaL0bepVdTADCCPyRhO1Vsvf9iy6Fl/U4Ft1bQfOo+k9apDlShY9rxVRktcHDwtbSD7lTgL46LQORjQB0i91UQDk6WBR2qth71yLroa3+pwJzQ5+ZPme2JlQ3hHmwaWvGNr20i3R2b1vRWx+MZ5wXKhGRiMCNRBGvnGzlWZDLLvJG+3sOFx5FyTxq+GO9/Y7I4DalwOog3VVHc1p3EFpxFgeY3t6/cpEuqlUzkFK1jiq03Tm4sIiLQzCIiAIiIAserqBHG951Ma5x8gusha3OP8AZZv9hVZOybL0o5c4xfi19Tn9dlqea+m82JvoiwA3W5lZpa+rbpGKX9W3SLXXAI0mtsCy3HGsFYizskfvh/8AHl9Vne5eE5y/dfT+fmg+xqUacYWUUlqsXoM+qqNjnyw6Qa5jbt7++mHY4Wt4G/aFoqrPeOWV0sjJCSLWsyw8mlyLa0w/R5v98J/qD3rWS0zHeE1p5wCtIVotWktzfvf6nMsDDKlkWVtHd5J+HqVZnNTuF+CeDv71p6QV5OckY1CTpj6lMcyMjsMDtEBo4U4aN/kMUjGRxxvshdEYwauou3qebWrKlUcG+45SM4WbGSHyx48/er18Og6oZT5W+5i6uMljjH1L0MmN4zukdSnIjsf3GPW4nKGZWcSLU0p5bn3Rq98IyC1qSc7rF9weYMXUxk1n0ulV+DmcvSVORHY/uZDxiOVNylPe4oZidl+FdbmuyyvjKVYdVE/od91dPGT4+L6z1r0KKPij1qMhbC3vmVeLRy/t2u2UZ9awanOCrY4tNMARsJPWuwCmZxR0Lnmd4a2qeMBg3DAfICpUUYK+QuPM68DJYio4vVfiuZomZdrHNLhBH3paDiflXt8rkXj4crvEQjnP/wCi2VFI3g5xcYNa7X9Yxv8AesmHKei0Dt1zbAd7Z5Aw1DZgss4vCC48z0Hhopvv7/PUn4Rl4mgflGscbmKAH+Iex6vRyVhAc7gwzTLSQXnUAeNrxW4qsqNc0g1WncHAxkX5L7Fjx1LO1nC4wnjPkdHKP7VDqS2VuZaNCHjfvWv3hE8xT2cC4EgHEXIJG2x2FT2HNumc0OHCEOAI+MdiCLjaubGqZv8AUV1XNuTSpYT9W0dGHuXRg4ptqSv6nH0ss3GM6btps7GTRUTIhZgtfluVloi9JJJWR8/KTk7sIiKSAiIgCIiALCytCZIJYxrfHI0c5aQPWs1FDVyU2mmj5+jyjj4Thz3WzyPlazyNIHSimbiN8TwPXZdLynmbSSh54JrJHm5e0Y3JuTo6scb4bSobW5huY8hjyQNR4I6iN4PkXBVw0UtJ9JHpSjUurNbjW0mVRwMwu3EMP2vxWEK//b0rb9xL9jnY/Vu61TuHk3u9G7rWOap6/qarHU1d6dLvwS9jeZn5diihc2SVjCZCQCdY0Wi/qK33dJT/ADhnSoJ3Dv3/AMp3WqdxL+N/KPWtFGK7p8GcFXMVJubvd+nInndHT/OG9JR2cdOMDUN6SoGM0iLDhACMT3hF/Wrb81Cf3o8z8UyY7fBlFSo+e9cifHOOm8e3pPUvHdLTePH2upQPuTPjR5n+SdyZ8YPM/FMmG1wJzVH/AHb1yJ73SUvj2+vqVO6Sk8ez19Sgfcn9YPM/yVe5P60ej/yTJhtcGM1R1S3rkTo5zUg/fx9J6lzzPHKbZKp74nNewhlnC+sNAPsWHnTm8YoNISY6bRg3R1326SjbciOdwA4SS0jHlxYx0rgWySjBgcC7BrL4iwN9mOtOhGWlSLU61LDzylFv5rkb2grHfGDDvonjoAd/arbKt4A8Ac8bSfKS0laifILGB2lVkODSWAxVDXPcBgwtdGGtuflaZtuVj4JJp+E4R2kJS069RjuNuwtd0rTqyv39/kdHaUHduH5uJA+seR4TDzMaCeazdapBVng5BcX71w5bOI9jypEzNNvjD5oHvXl+bdjg2Vw36UQB8hN1z3p6+Bo8YloyOPnfURmEyyODG3cXENa0DEkmwAXe8j0XAwRQ3uWRtaTvIAufKbrlVZm6GRPe3SBY3SBLhsx2DnXUsg1BkpoJHYudFGXHe4tFz03XRh3HS4nndJYh1Yx0WSb3mxREXSeSEREAREQBERAERcx7IGWpu2eBjkexkbW3DHFl3OGkSS044FvrWlKk6kslFZyyVc6csCqpI3uu5tza17kew8q4yMt1TO+jnl0wCW6T3Pbe21riQRzhWMo565XieWGWxAaT8VB8pgdxeVRicFVbUItadPj4NLV5reTSq3vJaLHaDkyHiHzndaoclw8U+c7rXFa7PXK8bywz6g0/qYPlNDuJyrHOf2V/H/yoPuLiXR9aSTTjZ2fj4/I3dZrRd7zuAyXFxftO61X4Mi4v2nda4xTZ95TcMZ++H1cAv9hVqM+cptbYVF3f+ODpPeJ2bX2lvfIZ963vOzfBkXE9butPgyLiDpPWuGd3eV/nB9FT/cTu6yv84Poqf7ijsuvtR3v+Izz1vedz+DYuIPWq/B0XEC4k/PLK4jbJ2ye+fIz9VT27xsZ8X9Yqy535Xa2N3bOEjXEfFQfJe5h/d/R9aoujaz+KPe18Xer3+HyZOdetnbRk+LiN6FXtKPiN6AuF92uV/nf8qD/1K/SZ35WcbdtjVf8AVQ8m6JXXRVd/Et7/AIlHXsr3J92U4WsoS5rWg8LHqAG9c8oLyNpBYHvqoWMpgFmhrv1gxb4V8Nerar2VMo19THwVRUh7Lh2jwcbcRqN2sB9a1fwU4gNMvegkgaNwC61yAThew6Au6h0fVhGzt8r+6RVYuFvE32UzIIZAAXNDSSO35pGgNxJ4J9musBe3JqUeFV+hy4ap4ftQ1P3F6GRRtf8AZAV34Gbaxc6x1jADbycp6VusFPRexKxlJazv0MQ0RgNQ2DctPXw3kdailk1d+HxNacBqaZQRu1DUufNzlrQP2mQ87YvcwLOytl6rimkjbUP0WuIBIZe3LZq8+PQ9dPTKO+XIyWMiu6/58yZ5WpGCknPBaBELza4J/Vb2k6vB52nZidjmn+xU9xb4tuHsXPcpZYn05oHTPLBJIyx0cWh5aAcNwWO3L9RGwNbM8ACzWgjDcANy6cP0bUh3tafUTxkXC2nvvwOxIueZJy9OKuNr5HOjkIaWusbFxsCDsxsuhrno1VVjlI7MVhJ4aajJp31BERanKEREAREQBcSz7r2NyhUNcbEOZ/SYQu2r5+7MVJoZTe62EsUUg5bAxn+mujDTyZ/IpOCkrMxDlOLjhVzmrYzUyEOFrR/0WKJlZuWBeZx+hET6GNdTm3Vi/KX1iRGkoxfy9zfZwVLDUus5uLYBr+ojWFI5gFw4bjiFYytIBK4HixX5RwMfu3rUPeTrJKyoaKUF5L6Gk4rKfqboPbvHSF6BG9aGyrZa3K2N9oqllo1XSO8plCxK5W/okZ3VNQOmKm6l7rx+jUvNOP5xPvUfdM7tVo0jhUP2nbFH1L1VVT+16caRwM+07XNPvXNH4f8AnL/2aOP0RmLJyZ4f8J9oUcFS/jFZNJWyA3Dtm4dS64ys7mE43TJcqKOjKkvG9QXoZWk/OC3ziObNMkCLQ/CzuXp/Bem5SJ2uTOIZtm7dqW1zoZaolPKD0sCi4r2i4LyDrxvYgjk8qz87akOqJO+w0ISBfjU8bveoU7yXo/YZBtc4bCqnxH62Q9LifetW+Zu8dK9Z0/tc3K+/S1p961TlanPQvkVlD9JN3zN4aJwNy14PQ5pXWhK06iOkLhVXLo2O+49i2eTcqSDUTY8ptqFgPLuXy+CVoteh9b0zBuUWvP2OzIub0WWngYv26wTa3l/OHOt7SZaftOAtruTawuee67rHhNNd5K0Wqpsp6Q1X24fn82WwZOCosRlIuoiKCTAre2P3PA8mmX/2hQfPTMqsyiY3SOpWOj0g1zeFuWutdrr4EXAI3Y710dFKbTuibnEXdhyr8fAfP6lfl7E1W7XNCcAMdLvgGhovYYEADFdnRXzsiDic/YjrXm7p4DgAPC1NAAGDdwCtf6O1njYOl/3V3FEVWSBwz/R2t8bB0v8Auqh7D9b4yHpd1LuiKc9IHCT2IK7jw+cepB2Iq7jQ+cepd2RM9IHDHdiiv0dDShtpF3hbSAN24BeHdijKBa1pdDotLiO+1aVr7Pohd2RM9IHBv9JK/fF569RdievB/deeu7opz8w0cN/0qrvqvP8AwVT2Ka7fF5/4LuKKesTK5KOHjsU1u+Lzj1K+zsW1gFg6Lzib7wRbUu0ooz8xko4m7sU1p+XEBjYaRNvUrlV2L66V2m98Ny2NpsXDCONsbfLosF+W67QiZ+YyUcarexfXyyOkdLBpO0bm7x4LQ0amnY0Lx/pRXeOh85/3V2hEWImhkK1jlo7HNS4jhJorXvg55Pk70LZwdj4tN+FbhqAB/wC/+gp+i54RUFZHXXxdWs7ze5WIjTZmhtryA2N9X5/PSs6nzZa213k77C1/XyqQIr3Odu5roMkMbtJWZFCG6vbdXUS5WyKWRVRQLBERCQiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiA/9k=">
+			</div>
+		</div>
+	</div>
+</body>
+
+<script src="https://kit.fontawesome.com/d111faab9b.js" crossorigin="anonymous"></script>
+
+<script>
+	let listElements = document.querySelectorAll('.list__button--click');
+
+	listElements.forEach(listElements => {
+		listElements.addEventListener('click', () => {
+			listElements.classList.toggle('arrow');
+
+			let height = 0;
+			let menu = listElements.nextElementSibling;
+
+			if (menu.clientHeight == "0") {
+				height = menu.scrollHeight;
+			}
+			menu.style.height = `${height}px`;
+		})
+	});
+
+</script>
+
+</html>
+
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	body {
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+		font-family: 'Times New Roman', Times, serif;
+	}
+
+	.main-container {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.nav__link:hover {
+		color: red;
+	}
+
+	.nav1,
+	.nav2 {
+		position: static;
+		border: 2px solid rgb(0, 128, 255);
+		box-sizing: border-box;
+		background: rgba(1, 104, 201, 1.0);
+		background: linear-gradient(180deg, rgba(1, 104, 201, 1.0), rgba(1, 75, 145, 1.0));
+	}
+
+	.nav1 {
+		height: 80px;
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+		display: flex;
+		justify-content: space-between;
+		color: white;
+	}
+
+	.img1 {
+		position: absolute;
+		width: 8%;
+		top: 0.3em;
+		left: 2em;
+	}
+
+	.img2 {
+		position: absolute;
+		width: 5%;
+		top: 0.2em;
+		right: 20px;
+	}
+
+	.titulo {
+		margin-top: -0.8em;
+		margin-left: 100px;
+
+	}
+
+	.nombre {
+		margin-top: -0.2em;
+		margin-left: 60px;
+	}
+
+	.nav-menu {
+		display: flex;
+		margin-left: 50px;
+		margin-right: 40px;
+		list-style: none;
+	}
+
+	.nav-menu-item {
+		font-size: 20px;
+		margin: 0 10px;
+		line-height: 80px;
+		width: max-content;
+	}
+
+	.admin {
+		margin-left: 230px;
+		font-size: 15px;
+	}
+
+
+	/*estilos menu*/
+	.nav2 {
+		width: 300px;
+		font-size: 20px;
+	}
+
+	.nav__link {
+		color: #000000;
+		display: block;
+		padding: 10px 0;
+		text-decoration: none;
+		margin-left: 30px;
+	}
+
+	.nav__link--inside {
+		border-radius: 6px;
+		padding-left: 10px;
+		text-align: left;
+	}
+
+	.nav__link:hover {
+		color: red;
+	}
+
+	.list {
+		height: 99.5vh;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	.list__item {
+		list-style: none;
+		width: 100%;
+		text-align: center;
+		overflow: hidden;
+		margin-bottom: 20px;
+	}
+
+	.list__item--click {
+		cursor: pointer;
+	}
+
+	.list__button {
+		display: flex;
+		text-align: center;
+		gap: 1em;
+		width: 70%;
+		margin: 0 auto;
+		background-color: #D9D9D9;
+		border: 2px solid #000000;
+		border-radius: 20px;
+	}
+
+	.arrow .list__arrow {
+		transform: rotate(-90deg);
+	}
+
+	.list__arrow {
+		margin-left: auto;
+		transition: transform .3s;
+	}
+
+	.list__show {
+		width: 80%;
+		margin-left: auto;
+		border-left: 2px solid #303440;
+		list-style: none;
+		transition: height .4s;
+		height: 0;
+	}
+
+	.list__inside a {
+		color: white;
+	}
+
+	.cerrar {
+		margin-top: -70px;
+	}
+
+	/*Estilos*/
+	.contenedorMayor {
+		display: flex;
+		margin-top: 150px;
+		margin-right: 300px;
+		text-align: center;
+	}
+
+	.formulario h1 {
+		text-align: center;
+		font-size: 50px;
+	}
+
+	.form-group {
+		margin-top: 30px;
+	}
+
+	.form-group .categ1 {
+		font-size: 20px;
+	}
+
+	.form-group input {
+		height: 42px;
+		font-size: 18px;
+		border: 0;
+		text-align: center;
+		margin-top: 10px;
+		margin-bottom: 20px;
+		border-radius: 10px;
+		border: 2px solid #000000;
+		font-family: 'Times New Roman', Times, serif;
+	}
+
+	.btn {
+		display: inline-block;
+		font-family: 'Times New Roman', Times, serif;
+		font-weight: 400;
+		text-align: center;
+		white-space: nowrap;
+		vertical-align: middle;
+		user-select: none;
+		border: 1px solid transparent;
+		padding: 0.375rem 0.75rem;
+		font-size: 1rem;
+		line-height: 1.5;
+		border-radius: 10px;
+		transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+		background-color: #0058AA;
+		color: white;
+	}
+
+	.btn:hover {
+		color: #000000;
+		text-decoration: none;
+	}
+
+	.imagen {
+		position: absolute;
+		margin: 15% 35em;
+	}
+</style>
+
+</style>
